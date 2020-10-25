@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster 
 
-COPY retweetbot.py /bots/
+COPY bots/retweetbot.py /bots/
 COPY requirements.txt /tmp
 RUN pip3 install -r /tmp/requirements.txt
 

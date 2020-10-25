@@ -39,6 +39,7 @@ def retweet_hashtag():
 				print(url)
 				print("\t ***successfully retweeted***")
 				new_tweets += 1
+				time.sleep(60)
 
 			except tweepy.TweepError as e:
 				pass
@@ -49,5 +50,5 @@ def retweet_hashtag():
 
 while True:
 	retweet_hashtag()
-	time.sleep(10)
+	time.sleep(300) #searches every 5 minutes
 
