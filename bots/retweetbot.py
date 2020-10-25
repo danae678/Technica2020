@@ -22,9 +22,10 @@ tweets_per_query = 10
 
 
 print ("searching for: " + query) 
-#this next loop will get the results of our search and loop through them. It will also filter out retweets using "-filter:retweets" so we only see original tweets
+
 def retweet_hashtag():
 	new_tweets = 0 #counts the number of tweets
+	#this will get the results of our search and loop through them. It will also filter out retweets using "-filter:retweets" so we only see original tweets
 	for tweet in tweepy.Cursor(api.search, q = query +" -filter:retweets", tweet_mode = "extended").items(tweets_per_query):
 		user_name = tweet.user.screen_name #gives us the users name who tweeted
 		id = tweet.id #gets the id of the tweet
